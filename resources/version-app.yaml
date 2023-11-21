@@ -10,6 +10,21 @@ spec:
     path: helm-guestbook
     repoURL: https://github.com/andrii-codefresh/argocd-example-apps1.git
     targetRevision: HEAD
+    plugin:
+      name: custom-plugin
+      env:
+        - name: ENV_VAR
+          value: value
+      parameters:
+        - name: string-param
+          value: example-string
+        - name: array-param
+          array:
+            - item1
+            - item2
+        - name: map-param
+          map:
+            param-name: param-value
   destination:
     name: in-cluster
     namespace: version-app
