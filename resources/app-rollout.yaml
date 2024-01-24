@@ -4,6 +4,8 @@ metadata:
   name: app-rollout
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
+  labels:
+    restricted: anotherTeam
 spec:
   project: default
   source:
