@@ -16,7 +16,7 @@ spec:
   priority: 10
   promotion:
     jsonPaths:
-      p1: "/path/to/version"
+      file: "/path/to/version"
   versionSource:
     file: "Chart.yaml"
     jsonPath: "{.appVersion}"
