@@ -14,9 +14,9 @@ spec:
     matchLabels:
       app: version-app
   priority: 10
-  promotion:
-    jsonPaths:
-      path1: "/path/to/version"
+#  promotion:
+#    jsonPaths:
+#      - "/path/to/version"
   versionSource:
     file: "Chart.yaml"
     jsonPath: "{.appVersion}"
