@@ -1,0 +1,22 @@
+apiVersion: csdp.codefresh.io/v1
+kind: ApplicationConfiguration
+metadata:
+  name: app-config
+  labels:
+    app: version-app
+spec:
+  applicationSourceSelector:
+#    matchExpressions:
+#      - key: environment
+#        operator: In
+#        values:
+#          - production
+    matchLabels:
+      app: version-app
+  priority: 10
+  promotion:
+    jsonPaths:
+      - "/path/to/version"
+  versionSource:
+    file: "Chart.yaml"
+    jsonPath: "{.appVersion}"
