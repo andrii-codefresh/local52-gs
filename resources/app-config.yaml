@@ -18,5 +18,5 @@ spec:
 #    jsonPaths:
 #      - "/path/to/version"
   versionSource:
-    file: "Chart.yaml"
-    jsonPath: "{.appVersion}"
+    file: "values.yaml"
+    jsonPath: "{.image.tag}"
