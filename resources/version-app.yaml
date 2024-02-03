@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: version-app
-  namespace: version-app
+  namespace: local52
   labels:
     app: version-app
   finalizers:
@@ -30,7 +30,7 @@ spec:
     #         param-name: param-value
   destination:
     name: in-cluster
-    namespace: version-app
+    namespace: local52
   syncPolicy:
     automated:
       prune: false
