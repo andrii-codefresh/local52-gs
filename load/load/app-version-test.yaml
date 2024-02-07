@@ -7,8 +7,8 @@ metadata:
 spec:
   project: default
   source:
-    path: .
-    repoURL: https://github.com/andrii-codefresh/local52-gs.git
+    path: helm-guestbook
+    repoURL: https://github.com/denis-codefresh/argocd-example-apps.git
     targetRevision: HEAD
   destination:
     name: in-cluster
