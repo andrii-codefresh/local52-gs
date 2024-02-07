@@ -1,0 +1,14 @@
+apiVersion: csdp.codefresh.io/v1
+kind: ApplicationConfiguration
+metadata:
+  name: app-config
+  labels:
+    app: app-under-version-test
+spec:
+  applicationSourceSelector:
+    matchLabels:
+      app: app-under-version-test
+  priority: 10
+  versionSource:
+    file: "values.yaml"
+    jsonPath: "{.image.tag}"
