@@ -4,6 +4,8 @@ metadata:
   name: app-version-test
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
+  labels:
+    app: app-under-version-test
 spec:
   project: default
   source:
