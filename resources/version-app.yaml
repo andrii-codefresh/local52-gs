@@ -30,7 +30,7 @@ spec:
     #         param-name: param-value
   destination:
     name: in-cluster
-    namespace: local52
+    namespace: default
   syncPolicy:
     automated:
       prune: false
