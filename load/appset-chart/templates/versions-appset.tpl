@@ -7,7 +7,7 @@ spec:
     - list:
         elements:
           {{- range $i := until (int .Values.appCount) }}
-          - index: {{ $i }}
+          - index: "{{ $i }}"
           {{- end }}
 
   syncPolicy:
