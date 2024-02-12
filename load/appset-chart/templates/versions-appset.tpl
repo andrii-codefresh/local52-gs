@@ -7,14 +7,14 @@ spec:
     - list:
         elements:
           {{- range $i := until (int .Values.appCount) }}
-          - "{{ $i }}"
+          - index: {{ $i }}
           {{- end }}
 
   syncPolicy:
     preserveResourcesOnDeletion: false
   template:
     metadata:
-      name: versions-appset-app-{{`{{appCount}}`}}
+      name: versions-appset-app-{{`{{index}}`}}
       annotations:
         "codefresh.io/product": {{ .Values.metadata.product }}
       labels:
