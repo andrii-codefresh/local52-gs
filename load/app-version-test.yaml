@@ -12,7 +12,7 @@ spec:
     targetRevision: HEAD
     helm:
       valuesObject:
-        appCount: 1000
+        appCount: 10
         metadata:
           product: version-test-product
           labels:
