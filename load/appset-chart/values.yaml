@@ -1,0 +1,5 @@
+appCount: 50
+metadata:
+  product: version-test-product
+  labels:
+    app: app-under-version-test
