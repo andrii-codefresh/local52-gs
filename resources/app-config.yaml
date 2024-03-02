@@ -19,4 +19,4 @@ spec:
 #      - "/path/to/version"
   versionSource:
     file: "values.yaml"
-    jsonPath: "$.image.tag"
+    jsonPath: "{.image.tag}"
