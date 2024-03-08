@@ -18,5 +18,5 @@ spec:
 #    jsonPaths:
 #      - "/path/to/version"
   versionSource:
-    file: "versionSource.json"
-    jsonPath: "$.parent.versionNumber"
+    file: "values.yaml"
+    jsonPath: "$.image.tag"
