@@ -19,4 +19,4 @@ spec:
 #      - "/path/to/version"
   versionSource:
     file: "versionSource.json"
-    jsonPath: "{.parent.versionNumber}"
+    jsonPath: "$.parent.versionNumber"
