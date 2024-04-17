@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: version-app
-  namespace: local52
+  namespace: local53
   labels:
     app: version-app
   finalizers:
