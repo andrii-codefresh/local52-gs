@@ -1,7 +1,6 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: version-app
   namespace: local
   labels:
     app: version-app
@@ -14,7 +13,7 @@ spec:
     repoURL: https://github.com/andrii-codefresh/argocd-example-apps1.git
     targetRevision: HEAD
     # plugin:
-    #   name: custom-plugin
+    #   name: custom-pluginq
     #   env:
     #     - name: ENV_VAR
     #       value: value
