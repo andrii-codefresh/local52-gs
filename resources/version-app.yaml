@@ -8,6 +8,8 @@ metadata:
     app: version-app
     l2: label
     l3: label3
+  annotations:
+    codefresh.io/product: app-version-product
 spec:
   project: default
   source:
