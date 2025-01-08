@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-rollout
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io/foreground
+  labels:
+    restricted: anotherTeam
+spec:
+  project: default
+  source:
+    path: guestbook-rollout
+    repoURL: https://github.com/andrii-codefresh/argocd-example-apps1.git
+    targetRevision: HEAD
+  destination:
+    name: in-cluster
+    namespace: gr
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+      allowEmpty: false
+    syncOptions:
+      - PrunePropagationPolicy=foreground
+      - Replace=false
+      - PruneLast=false
+      - Validate=true
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=false
+      - ServerSideApply=true
+      - RespectIgnoreDifferences=false
